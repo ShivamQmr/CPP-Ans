@@ -1,0 +1,32 @@
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+
+int main() {
+    int n, q;
+    cin >> n >> q;
+    vector<vector<int>> a;
+    for(int i =0; i<n ; i++){
+        int k;
+        cin >> k;
+        vector<int> ln(k);
+        for(int j = 0; j<k ; j++){
+            cin >> ln[j];
+        } 
+        a.push_back(ln);
+    }
+    
+    int b[q], c[q];
+    for(int i=0; i<q; i++){
+        cin >> b[i] >> c[i];
+    }
+    
+    for(int i=0; i<q; i++){
+        cout << a[b[i]][c[i]] << "\n";
+    }
+    return 0;
+}

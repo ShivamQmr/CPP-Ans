@@ -1,9 +1,21 @@
-#include<stdio.h>
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
 int main(){
-    for(int i=65 ; i<=70 ; i++){
-        for(int j=65 ; j<=i ; i++){
-            printf("%c", j);
-        }
-        printf("\n");
+    int i;
+    cin >> i;
+    cout << endl;
+    int arr[i];
+    for(int j=0; j<i; j++){
+        cin >> arr[j];
     }
+    
+    for(int k=(i-1); k>=0; k--){
+        cout << arr[k] << " ";
+    }
+    return 0;
 }
